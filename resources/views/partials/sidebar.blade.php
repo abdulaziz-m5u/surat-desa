@@ -18,7 +18,7 @@
             <!-- Divider -->
             <hr class="sidebar-divider">
 
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                     <span>{{ __('User Management') }}</span>
                 </a>
@@ -29,6 +29,16 @@
                         <a class="collapse-item {{ request()->is('admin/users') || request()->is('admin/users/*') ? 'active' : '' }}" href="{{ route('admin.users.index') }}"> <i class="fa fa-user mr-2"></i> {{ __('Users') }}</a>
                     </div>
                 </div>
+            </li> -->
+
+            <li class="nav-item {{ request()->is('admin/categories') || request()->is('admin/categories') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('admin.categories.index') }}">
+                    <span>{{ __('Kategori surat') }}</span></a>
+            </li>
+
+            <li class="nav-item {{ request()->is('admin/letters') || request()->is('admin/letters') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('admin.letters.index') }}">
+                    <span>{{ __('Daftar Surat') }}</span></a>
             </li>
 
 
